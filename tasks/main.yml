@@ -1,0 +1,9 @@
+---
+# - name: add proftpd deb repository
+#   apt_repository: repo='deb http://httpredir.debian.org/debian {{ debian.version }}-backports main' state=present
+
+- name: install proftpd
+  apt: pkg={{ item }} state=latest
+  with_items:
+    - proftpd
+  notify: restart proftpd
