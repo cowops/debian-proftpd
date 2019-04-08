@@ -13,9 +13,6 @@ Role Variables
 
 proftpd:
   version: 1.3.5
-  port:
-    admin: 8083
-    api: 8086
 
 Dependencies
 ------------
