@@ -1,6 +1,9 @@
 ---
 - name: install proftpd
-  apt: pkg={{ item }} state=latest
-  with_items:
-    - proftpd
+  apt:
+    name: {{ packages }}
+    state: latest
+  vars:
+    packages:
+      - proftpd
   notify: restart proftpd
