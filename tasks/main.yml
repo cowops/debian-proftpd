@@ -1,7 +1,7 @@
 ---
 - name: install proftpd
   apt:
-    name: {{ packages }}
+    name: "{{ packages }}"
     state: latest
   vars:
     packages:
